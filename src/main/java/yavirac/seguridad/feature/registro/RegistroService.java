@@ -31,7 +31,7 @@ public class RegistroService {
         return actividadRepository.findAll();
     }
 
-    public List<Registro> findByName(String term){
-        return actividadRepository.findByNameLikeIgnoreCase(term+"%");
+    public List<Registro> findByList(String term){
+        return actividadRepository.findByUsuarioLikeIgnoreCase(term+"%");
     }
 }

@@ -54,7 +54,7 @@ public class RegistroController {
     }
 
     @GetMapping("/findByName/{term}")
-    public List<Registro> findByName(@PathVariable String term){
-        return registroService.findByName(term);
+    public List<Registro> findByList(@PathVariable String term){
+        return registroService.findByList(term);
     }
 }

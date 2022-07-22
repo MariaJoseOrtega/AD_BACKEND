@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 public interface RegistroRepository extends CrudRepository<Registro, Long> {
 
     List<Registro> findAll();
-    List<Registro> findByNameLikeIgnoreCase(String term);
+    List<Registro> findByUsuarioLikeIgnoreCase(String term);
 }
