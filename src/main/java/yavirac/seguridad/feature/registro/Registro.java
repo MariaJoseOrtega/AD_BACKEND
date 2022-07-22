@@ -11,6 +11,7 @@ import lombok.Data;
 @Data
 @Table("registro_actividad")
 public class Registro {
+    
     @Id
     @Column("registro_actividad_id")
     private long registroActividadId;

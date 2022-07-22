@@ -1,5 +1,6 @@
 package yavirac.seguridad.feature.registro;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -45,5 +46,15 @@ public class RegistroController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long id){
         registroService.deleteById(id);
+    }
+
+    @GetMapping("/findAll")
+    public List<Registro> findAll(){
+        return registroService.findAll();
+    }
+
+    @GetMapping("/findByName/{term}")
+    public List<Registro> findByName(@PathVariable String term){
+        return registroService.findByName(term);
     }
 }

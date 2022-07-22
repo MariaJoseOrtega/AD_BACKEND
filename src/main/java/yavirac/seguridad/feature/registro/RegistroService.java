@@ -1,5 +1,6 @@
 package yavirac.seguridad.feature.registro;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +25,13 @@ public class RegistroService {
 
     public void deleteById(long id){
         actividadRepository.deleteById(id);
+    }
+
+    public List<Registro> findAll(){
+        return actividadRepository.findAll();
+    }
+
+    public List<Registro> findByName(String term){
+        return actividadRepository.findByNameLikeIgnoreCase(term+"%");
     }
 }
