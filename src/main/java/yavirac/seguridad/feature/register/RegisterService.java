@@ -9,7 +9,7 @@ public class RegisterService {
     @Autowired
     RegisterRepository registerRepository;
 
-    //CRUD = Create, Read, Update, Delete
+    //CRUD = Create, Read, Update, Deletee
 
     public Register save(Register register){
 
