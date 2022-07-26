@@ -19,13 +19,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class PermisoController {
     
     @Autowired
-    PermisoService permisoService; //inyectando
+    PermisoService permisoService;
 
     //CRUD
 
     //Create
     @PostMapping("/save")
     public Permiso save(@RequestBody Permiso permiso){
+        System.out.println("-----------------");
+        System.out.println("-----------------");
+        System.out.println("-----------------");
+        System.out.println(permiso);
         return permisoService.save(permiso);
     }
 
@@ -48,5 +52,6 @@ public class PermisoController {
     public void delete(@PathVariable long id){
         permisoService.deleteById(id);
     }
+
 
 }

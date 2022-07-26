@@ -1,5 +1,6 @@
 package yavirac.seguridad.feature.permiso;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,6 @@ public class PermisoService {
     //CRUD = Create, Read, Update, Delete
 
     public Permiso save(Permiso permiso){
-
         return permisoRepository.save(permiso);
     }
 
@@ -27,5 +27,5 @@ public class PermisoService {
     public void deleteById(long id){
         permisoRepository.deleteById(id);
     }
-    
+
 }

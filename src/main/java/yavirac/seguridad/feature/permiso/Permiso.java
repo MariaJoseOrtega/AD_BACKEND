@@ -1,6 +1,5 @@
 package yavirac.seguridad.feature.permiso;
 
-//import java.sql.Time;
 import java.sql.Timestamp;
 
 import org.springframework.data.annotation.Id;
@@ -22,5 +21,7 @@ public class Permiso {
     private Timestamp created;
     private Timestamp updated;
     private boolean enabled;
+    
+    
     
 }
