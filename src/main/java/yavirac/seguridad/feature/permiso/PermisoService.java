@@ -1,6 +1,8 @@
 package yavirac.seguridad.feature.permiso;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,14 @@ public class PermisoService {
 
     public void deleteById(long id){
         permisoRepository.deleteById(id);
+    }
+
+    public List<Permiso> findAll(){
+        return permisoRepository.findAll();
+    }
+
+    public List<Permiso> findByName(String term){
+        return permisoRepository.findByNameLikeIgnoreCase(term+"%");
     }
 
 }
