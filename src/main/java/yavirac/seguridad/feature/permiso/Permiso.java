@@ -21,6 +21,7 @@ public class Permiso {
     private Timestamp created;
     private Timestamp updated;
     private boolean enabled;
+    private Long personId;
     
     
     
