@@ -27,6 +27,6 @@ public class Registro {
     private boolean archive;
     private String usuario;
 
-    @MappedCollection(idColumn = "comentario_id")
+    @MappedCollection(idColumn = "registro_actividad_id")
     private Set<RegistroComentario> comentarios = new HashSet<>();
 }

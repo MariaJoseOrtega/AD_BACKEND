@@ -12,8 +12,8 @@ public class ComentarioService {
     @Autowired
     ComentarioRepository comentarioRepository;
 
-    public List<Comentario> findByName(String term){
-        return comentarioRepository.findByNameLikeIgnoreCase(term+"%");
+    public List<Comentario> findByComentario(String term){
+        return comentarioRepository.findByComentarioLikeIgnoreCase(term+"%");
     }
 
     public Comentario findById(long id){
