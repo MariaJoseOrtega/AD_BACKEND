@@ -7,6 +7,6 @@ import lombok.Data;
 @Data
 public class Comentario {
     @Id
-    private long id;
+    private long comentarioId;
     private String opinion;
 }

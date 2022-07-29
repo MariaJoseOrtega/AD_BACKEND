@@ -8,7 +8,8 @@ import lombok.Data;
 
 public class RegistroComentario {
     
-    @Id private long id;
+    @Id 
+    private long id;
     private Long registroActividadId;
     private Long comentarioId;
 }

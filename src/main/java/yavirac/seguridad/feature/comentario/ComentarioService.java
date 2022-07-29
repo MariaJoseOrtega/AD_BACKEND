@@ -13,7 +13,7 @@ public class ComentarioService {
     ComentarioRepository comentarioRepository;
 
     public List<Comentario> findByComentario(String term){
-        return comentarioRepository.findByComentarioLikeIgnoreCase(term+"%");
+        return comentarioRepository.findByOpinionLikeIgnoreCase(term+"%");
     }
 
     public Comentario findById(long id){
