@@ -19,7 +19,7 @@ public class Registro {
     @Column("registro_actividad_id")
     private long registroActividadId;
     private int actividad;
-    private String comentario;
+    private String descripcion;
     private Date fecha;
     private Timestamp created;
     private Timestamp updated;
