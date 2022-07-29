@@ -1,4 +1,4 @@
-package yavirac.seguridad.auth.comentario;
+package yavirac.seguridad.feature.comentario;
 
 import java.util.List;
 

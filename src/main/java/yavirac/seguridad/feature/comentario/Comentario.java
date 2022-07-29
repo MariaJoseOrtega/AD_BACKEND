@@ -1,4 +1,4 @@
-package yavirac.seguridad.auth.comentario;
+package yavirac.seguridad.feature.comentario;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
