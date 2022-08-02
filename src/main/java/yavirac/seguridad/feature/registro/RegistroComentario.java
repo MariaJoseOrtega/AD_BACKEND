@@ -12,4 +12,5 @@ public class RegistroComentario {
     private long id;
     private Long registroActividadId;
     private Long comentarioId;
+    private String comentario;
 }

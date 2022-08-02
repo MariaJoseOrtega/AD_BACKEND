@@ -18,9 +18,9 @@ public class ComentarioController {
     @Autowired
     ComentarioService comentarioService;
 
-    @GetMapping("/findByComentario/{term}")
-    public List<Comentario> findByComentario(@PathVariable String term){
-        return comentarioService.findByComentario(term);
+    @GetMapping("/findByOpinion/{term}")
+    public List<Comentario> findByOpinion(@PathVariable String term){
+        return comentarioService.findByOpinion(term);
     }
 
     @GetMapping("/findById/{id}")

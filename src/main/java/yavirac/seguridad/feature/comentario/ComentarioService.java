@@ -12,7 +12,7 @@ public class ComentarioService {
     @Autowired
     ComentarioRepository comentarioRepository;
 
-    public List<Comentario> findByComentario(String term){
+    public List<Comentario> findByOpinion(String term){
         return comentarioRepository.findByOpinionLikeIgnoreCase(term+"%");
     }
 
