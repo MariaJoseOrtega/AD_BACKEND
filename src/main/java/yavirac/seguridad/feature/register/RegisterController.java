@@ -1,5 +1,7 @@
 package yavirac.seguridad.feature.register;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -49,4 +51,13 @@ public class RegisterController {
         registerService.deleteById(id);
     }
 
+    @GetMapping("/{findAll}")
+    public List<Register> findAll(){
+        return registerService.findAll();
+    }
+
+    @GetMapping("/findByDetalle{tern}")
+    public List<Register> findByDetalle(@PathVariable String tern){
+        return registerService.findByDetalle(tern);
+    }
 }

@@ -1,5 +1,7 @@
 package yavirac.seguridad.feature.register;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +11,7 @@ public class RegisterService {
     @Autowired
     RegisterRepository registerRepository;
 
-    //CRUD = Create, Read, Update, Deletee
+    //CRUD = Create, Read, Update, Delete
 
     public Register save(Register register){
 
@@ -28,4 +30,11 @@ public class RegisterService {
         registerRepository.deleteById(id);
     }
     
+    public List<Register> findAll(){
+        return registerRepository.findAll();
+    }
+
+    public List<Register> findByDetalle(String tern){
+        return registerRepository.findByDetalleLikeIgnoreCase(tern+"%");
+    }
 }
