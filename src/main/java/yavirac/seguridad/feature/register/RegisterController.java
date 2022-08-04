@@ -51,13 +51,13 @@ public class RegisterController {
         registerService.deleteById(id);
     }
 
-    @GetMapping("/{findAll}")
+    @GetMapping("/findAll")
     public List<Register> findAll(){
         return registerService.findAll();
     }
 
-    @GetMapping("/findByDetalle{tern}")
-    public List<Register> findByDetalle(@PathVariable String tern){
-        return registerService.findByDetalle(tern);
+    @GetMapping("/findByDetalle{term}")
+    public List<Register> findByDetalle(@PathVariable String term){
+        return registerService.findByDetalle(term);
     }
 }

@@ -34,7 +34,7 @@ public class RegisterService {
         return registerRepository.findAll();
     }
 
-    public List<Register> findByDetalle(String tern){
-        return registerRepository.findByDetalleLikeIgnoreCase(tern+"%");
+    public List<Register> findByDetalle(String term){
+        return registerRepository.findByDetalleLikeIgnoreCase(term+"%");
     }
 }
