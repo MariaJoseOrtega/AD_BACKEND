@@ -21,5 +21,6 @@ public class Register {
     private Timestamp updated;
     private boolean enabled;
     private boolean archive;
+    private Long permisoId;
     
 }
