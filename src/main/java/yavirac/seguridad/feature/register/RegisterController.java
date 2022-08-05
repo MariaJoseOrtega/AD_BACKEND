@@ -56,7 +56,7 @@ public class RegisterController {
         return registerService.findAll();
     }
 
-    @GetMapping("/findByDetalle{term}")
+    @GetMapping("/findByDetalle/{term}")
     public List<Register> findByDetalle(@PathVariable String term){
         return registerService.findByDetalle(term);
     }
