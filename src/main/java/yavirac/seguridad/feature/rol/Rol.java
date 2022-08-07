@@ -22,6 +22,4 @@ public class Rol {
     private Timestamp updated;
     private Timestamp created;
 
-
-   
 }

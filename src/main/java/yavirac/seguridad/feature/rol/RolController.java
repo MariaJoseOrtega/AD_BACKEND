@@ -28,6 +28,11 @@ public class RolController {
     public Rol save(@RequestBody Rol rol){
         return rolService.save(rol);
     }
+    //Obtener todos 
+    @GetMapping("/all")
+    public Iterable<Rol> buscarTodos(){
+        return rolService.find();
+    }
 
     //Read
     @GetMapping("/{id}")
