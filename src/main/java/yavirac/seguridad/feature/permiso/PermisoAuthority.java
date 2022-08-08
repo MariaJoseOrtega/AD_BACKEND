@@ -7,7 +7,8 @@ import lombok.Data;
 @Data
 public class PermisoAuthority {
 
-    @Id private long id;
+    @Id 
+    private long id;
     private Long permisoId;
     private Long authorityId;
     
