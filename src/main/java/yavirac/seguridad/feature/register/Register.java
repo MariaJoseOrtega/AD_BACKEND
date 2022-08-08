@@ -1,8 +1,10 @@
 package yavirac.seguridad.feature.register;
 import java.sql.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 import lombok.Data;
@@ -12,7 +14,6 @@ import lombok.Data;
 public class Register {
 
     @Id
-    @Column("register_id")
     private long registerId;
     private String detalle;
     private Timestamp fechaHoraDesde;
@@ -23,4 +24,7 @@ public class Register {
     private boolean archive;
     private Long permisoId;
     
+    @MappedCollection(idColumn = "register_id")
+    private Set <RegisterComent> coments = new HashSet<>();
 }
+
