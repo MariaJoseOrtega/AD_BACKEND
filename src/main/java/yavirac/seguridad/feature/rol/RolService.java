@@ -10,6 +10,9 @@ public class RolService {
     RolRepository rolRepository;
 
     //CRUD = Create, Read, Update, Delete
+    public Iterable<Rol> find(){
+        return rolRepository.findAll();
+    }
 
     public Rol save(Rol rol){
 

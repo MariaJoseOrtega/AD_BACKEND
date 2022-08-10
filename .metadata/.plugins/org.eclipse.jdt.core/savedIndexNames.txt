@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\julyo\Documents\Desarrollo\0-Proyecto06082022\AD_BACKEND\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index

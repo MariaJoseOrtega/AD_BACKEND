@@ -21,7 +21,8 @@ public class Rol {
     private boolean archived;
     private Timestamp updated;
     private Timestamp created;
-
+    @Column("fk_person_id")
+    private String fkpersonId;
 
    
 }
