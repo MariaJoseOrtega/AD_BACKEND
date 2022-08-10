@@ -5,11 +5,11 @@ import org.springframework.data.annotation.Id;
 import lombok.Data;
 
 @Data
-public class PermisoAuthority {
+public class PermisoRegister {
 
     @Id 
     private long id;
     private Long permisoId;
-    private Long authorityId;
+    private Long registerId;
     
 }
