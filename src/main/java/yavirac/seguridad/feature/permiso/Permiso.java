@@ -27,6 +27,6 @@ public class Permiso {
     private Long personId;
     
     @MappedCollection(idColumn = "permiso_id")
-    private Set<PermisoAuthority> authorities = new HashSet<>();
+    private Set<PermisoRegister> registers = new HashSet<>();
     
 }
