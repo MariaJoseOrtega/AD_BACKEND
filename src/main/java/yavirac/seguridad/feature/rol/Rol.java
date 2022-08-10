@@ -1,9 +1,12 @@
 package yavirac.seguridad.feature.rol;
 
 import java.sql.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 import lombok.Data;
@@ -22,4 +25,6 @@ public class Rol {
     private Timestamp updated;
     private Timestamp created;
 
+    @MappedCollection(idColumn = "rol_id")
+    private Set<RolAuthority> authorities = new HashSet<>();
 }

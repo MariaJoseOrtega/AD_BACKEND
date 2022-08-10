@@ -1,4 +1,4 @@
-package yavirac.seguridad.feature.rol;
+package yavirac.seguridad.feature.person;
 
 import java.util.List;
 
@@ -16,53 +16,51 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/rol")
+@RequestMapping("/api/person")
 @CrossOrigin({"*"})
-public class RolController {
+public class PersonController {
     
     @Autowired
-    RolService rolService;
+    PersonService personService;
 
     //CRUD
 
     //Create
     @PostMapping("/save")
-    public Rol save(@RequestBody Rol rol){
-        return rolService.save(rol);
-    }
-    //Obtener todos 
-    @GetMapping("/all")
-    public Iterable<Rol> buscarTodos(){
-        return rolService.find();
+    public Person save(@RequestBody Person person){
+        return personService.save(person);
     }
 
     //Read
-    @GetMapping("/{id}")
-    public Rol findById(@PathVariable long id){
-        return rolService.findById(id);
+    @GetMapping("/findById/{id}")
+    public Person findById(@PathVariable long id){
+        return personService.findById(id);
     }
 
     //Update
     @PutMapping("/update")
-    public Rol update(@RequestBody Rol rol)
+    public Person update(@RequestBody Person person)
     {
-        return rolService.save(rol);
+        return personService.save(person);
     }
 
     //Delete
     @DeleteMapping("/deleteById/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable long id){
-        rolService.deleteById(id);
+        personService.deleteById(id);
     }
 
     @GetMapping("/findAll")
-    public List<Rol> findAll(){
-        return rolService.findAll();
+    public List<Person> findAll(){
+        return personService.findAll();
     }
 
     @GetMapping("/findByName/{term}")
-    public List<Rol> findByName(@PathVariable String term){
-        return rolService.findByName(term);
+    public List<Person> findByName(@PathVariable String term){
+        return personService.findByName(term);
     }
+
+    
+
 }
