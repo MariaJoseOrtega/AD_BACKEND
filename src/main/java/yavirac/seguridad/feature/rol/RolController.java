@@ -1,7 +1,5 @@
 package yavirac.seguridad.feature.rol;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -56,13 +54,4 @@ public class RolController {
         rolService.deleteById(id);
     }
 
-    @GetMapping("/findAll")
-    public List<Rol> findAll(){
-        return rolService.findAll();
-    }
-
-    @GetMapping("/findByName/{term}")
-    public List<Rol> findByName(@PathVariable String term){
-        return rolService.findByName(term);
-    }
 }
