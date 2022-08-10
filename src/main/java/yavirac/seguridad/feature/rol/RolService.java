@@ -19,9 +19,6 @@ public class RolService {
         return rolRepository.save(rol);
     }
 
-    public Iterable<Rol> find(){
-        return rolRepository.findAll();
-    }
 
     public Rol findById(long id){
         return rolRepository.findById(id).orElse(new Rol());

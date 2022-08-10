@@ -55,8 +55,6 @@ public class RolController {
     public void delete(@PathVariable long id){
         rolService.deleteById(id);
     }
-
-<<<<<<< HEAD
     // @GetMapping("/findAll")
     // public List<Rol> findAll(){
     //     return rolService.findAll();
@@ -67,6 +65,3 @@ public class RolController {
     //     return rolService.findByName(term);
     // }
 }
-=======
-}
->>>>>>> 2d4c1bd72e77c4f9b283b82d2c9aec531e688acc
