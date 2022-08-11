@@ -26,4 +26,10 @@ public class AuthorityController {
     public Authority findById(@PathVariable long id){
         return authorityService.findById(id);
     }
+
+
+    @GetMapping("/findAll")
+    public Iterable<Authority> buscarTodos(){
+        return authorityService.findAll();
+    }
 }

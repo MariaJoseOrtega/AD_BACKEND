@@ -18,4 +18,10 @@ public class AuthorityService {
     public Authority findById(long id){
         return authorityRepository.findById(id).orElse(new Authority());
     }
+
+    public Iterable<Authority> findAll(){
+        return authorityRepository.findAll();
+    }
+
+
 }
